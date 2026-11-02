@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Script from "next/script";
 import {
   Code2,
   Zap,
@@ -10,7 +11,7 @@ import {
   Copy,
   Check,
 } from "lucide-react";
-import { WIDGET_DEMO_URL, EMBED_SNIPPET } from "@/lib/config";
+import { EMBED_SNIPPET } from "@/lib/config";
 
 const callouts = [
   {
@@ -37,16 +38,7 @@ const callouts = [
 
 export default function WidgetShowcase() {
   const [copied, setCopied] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-  const [src, setSrc] = useState(null);
-
-  // Attach the iframe only after hydration so onLoad can never be missed.
-  useEffect(() => {
-    setSrc(WIDGET_DEMO_URL);
-    // Safety net: never leave the loading overlay up forever.
-    const t = setTimeout(() => setLoaded(true), 10000);
-    return () => clearTimeout(t);
-  }, []);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
 
   const copy = () => {
     navigator.clipboard.writeText(EMBED_SNIPPET);
@@ -56,6 +48,13 @@ export default function WidgetShowcase() {
 
   return (
     <section id="demo" className="mx-auto max-w-7xl px-5 py-20">
+      {/* Load the bundle from your CDN */}
+      <Script
+        src="https://cdn.purebook.in/engine.js"
+        strategy="afterInteractive"
+        onLoad={() => setScriptLoaded(true)}
+      />
+
       <div className="text-center">
         <h2 className="text-3xl font-bold sm:text-4xl">
           The product experience, live
@@ -101,7 +100,7 @@ export default function WidgetShowcase() {
           </div>
         </div>
 
-        {/* Simulated hotel website frame hosting the real widget */}
+        {/* Simulated hotel website browser frame */}
         <div className="overflow-hidden rounded-2xl border border-slate-300 bg-white shadow-card">
           <div className="flex items-center gap-2 border-b bg-slate-100 px-4 py-2.5">
             <span className="h-3 w-3 rounded-full bg-red-400" />
@@ -111,7 +110,7 @@ export default function WidgetShowcase() {
               www.yourhotel.com
             </span>
             <a
-              href={WIDGET_DEMO_URL}
+              href="/demo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-brand-600"
@@ -120,21 +119,15 @@ export default function WidgetShowcase() {
               <ExternalLink size={14} />
             </a>
           </div>
-          <div className="relative h-[620px] bg-slate-50">
-            {!loaded && (
+
+          <div className="relative h-[620px] overflow-y-auto bg-slate-50 p-4">
+            {!scriptLoaded && (
               <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-slate-50 text-sm text-slate-400">
                 Loading live demo…
               </div>
             )}
-            {src && (
-              <iframe
-                src={src}
-                title="PureBook live booking engine demo"
-                className="h-full w-full border-0"
-                onLoad={() => setLoaded(true)}
-                allow="payment"
-              />
-            )}
+            {/* Direct Web Component embed */}
+            <hotel-booking-engine data-hotel="grand-palms"></hotel-booking-engine>
           </div>
         </div>
       </div>

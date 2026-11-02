@@ -248,7 +248,7 @@ export default function Page() {
           <strong>Hotel Name</strong> in the subject line for faster resolution.
         </p>
         <p className="mt-1 text-xs text-slate-500">
-          Support Hours: Monday to Saturday (9:00 AM – 6:00 PM IST)
+          Support Hours: Monday to Sunday (9:00 AM – 6:00 PM IST)
         </p>
       </div>
     </article>

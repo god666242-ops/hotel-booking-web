@@ -310,7 +310,7 @@ export default function Page() {
             support@mail.purebook.in
           </a>
         </p>
-        <p>Operating Hours: Monday to Friday (10:00 AM – 6:00 PM IST)</p>
+        <p>Support Hours: Monday to Sunday (9:00 AM – 6:00 PM IST)</p>
         <p className="mt-2 text-xs text-slate-500">
           We endeavor to acknowledge privacy-related inquiries and grievances
           within 48 hours and resolve them within statutory time limits.

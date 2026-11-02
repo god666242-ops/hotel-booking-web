@@ -80,22 +80,38 @@ export default function WidgetShowcase() {
             </div>
           ))}
 
-          <div className="overflow-hidden rounded-xl bg-navy-800">
-            <div className="flex items-center justify-between border-b border-white/10 px-4 py-2 text-xs text-slate-400">
-              <span>Embed code</span>
+          {/* Clean Terminal-style Embed Code Snippet Container */}
+          <div className="overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-950 shadow-xl transition-all">
+            <div className="flex items-center justify-between border-b border-slate-800/70 bg-slate-900/60 px-4 py-2.5 backdrop-blur-sm">
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-slate-700/80" />
+                <span className="h-2.5 w-2.5 rounded-full bg-slate-700/80" />
+                <span className="h-2.5 w-2.5 rounded-full bg-slate-700/80" />
+                <span className="ml-2 font-mono text-[11px] font-medium tracking-wide text-slate-400">
+                  embed.html
+                </span>
+              </div>
               <button
+                type="button"
                 onClick={copy}
-                className="flex items-center gap-1 rounded bg-white/10 px-2 py-1 hover:bg-white/20"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700/60 bg-slate-800/70 px-2.5 py-1 text-[11px] font-medium text-slate-300 transition-all duration-150 hover:border-slate-600 hover:bg-slate-700 hover:text-white active:scale-95"
               >
                 {copied ? (
-                  <Check size={12} className="text-emerald-400" />
+                  <>
+                    <Check size={12} className="text-emerald-400" />
+                    <span className="text-emerald-400">Copied!</span>
+                  </>
                 ) : (
-                  <Copy size={12} />
-                )}{" "}
-                {copied ? "Copied" : "Copy"}
+                  <>
+                    <Copy size={12} className="text-slate-400" />
+                    <span>Copy snippet</span>
+                  </>
+                )}
               </button>
             </div>
-            <pre className="overflow-x-auto p-4 text-xs leading-relaxed text-emerald-300">
+            
+            {/* Soft-wrapped code block with zero horizontal scrollbars */}
+            <pre className="p-4 font-mono text-[11.5px] leading-relaxed text-emerald-400 whitespace-pre-wrap break-all sm:break-normal [word-break:break-word]">
               {EMBED_SNIPPET}
             </pre>
           </div>

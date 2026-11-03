@@ -61,7 +61,7 @@ export default function Footer() {
             <Logo light className="h-10" />
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
-            Helping independent hotels, resorts and homestays keep 100% of their direct booking revenue.
+            Helping independent hotels, resorts and homestays keep far more of every direct booking.
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
             {badges.map(({ icon: Icon, label }) => (

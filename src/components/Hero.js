@@ -46,7 +46,7 @@ export default function Hero() {
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg lg:mx-0">
             Drop one line of code onto your website. Accept instant UPI &amp; card payments, manage room inventory
-            seamlessly, and keep 100% of your guest revenue.
+            seamlessly, and keep far more of every guest booking.
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">

@@ -3,9 +3,8 @@ import Calculator from '@/components/Calculator';
 import WidgetShowcase from '@/components/WidgetShowcase';
 import Features from '@/components/Features';
 import Pricing from '@/components/Pricing';
-import Testimonials from '@/components/Testimonials';
+// import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
-import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
   return (
@@ -15,9 +14,8 @@ export default function Home() {
       <WidgetShowcase />
       <Features />
       <Pricing />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faq />
-      <ContactSection />
     </>
   );
 }

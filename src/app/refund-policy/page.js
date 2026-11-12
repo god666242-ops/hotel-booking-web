@@ -4,228 +4,219 @@ export default function Page() {
   return (
     <article className="mx-auto max-w-3xl space-y-4 px-5 py-16 text-slate-700 [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:text-slate-900 [&_h2]:mt-8 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-slate-900 [&_h3]:mt-4 [&_h3]:text-base [&_h3]:font-medium [&_h3]:text-slate-800 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
       <h1>Refund &amp; Cancellation Policy</h1>
-      <p className="text-sm text-slate-500">
-        Last updated:{" "}
-        {new Date().toLocaleDateString("en-IN", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
-      </p>
+      <p className="text-sm text-slate-500">Last updated: 12 November 2026</p>
 
       <p className="rounded-lg bg-amber-50 p-3 text-sm text-amber-800">
-        This Refund and Cancellation Policy governs the terms, conditions, and
-        procedures applicable to cancellations, modifications, and monetary
-        refunds for reservations processed via the PureBook direct booking engine
-        and software platform across India.
+        This Refund and Cancellation Policy governs cancellations, modifications,
+        and refunds for reservations made through the PureBook direct booking
+        engine and software platform across India.
       </p>
 
       <h2>1. Nature of the Platform &amp; Contractual Hierarchy</h2>
       <p>
         PureBook (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) provides SaaS
-        technology, booking engine infrastructure, and payment processing
-        integrations for independent accommodation providers (&quot;Hoteliers&quot;)
-        operating across Indian States and Union Territories.
+        technology and a booking engine for independent accommodation providers
+        (&quot;Hoteliers&quot;) operating across India.
       </p>
       <p>
-        PureBook facilitates the reservation technology but is not the direct
-        provider of accommodation. The contract of hospitality and accommodation
-        exists solely between the guest (&quot;Guest&quot;) and the respective Hotelier.
-        Consequently, every property configures, manages, and enforces its own
-        cancellation rules, refund tiers, and check-in timelines in accordance
-        with their operational requirements.
+        PureBook facilitates the reservation technology but is not the provider
+        of accommodation. The contract of hospitality exists solely between the
+        guest (&quot;Guest&quot;) and the respective Hotelier. Every property sets
+        and enforces its own cancellation rules, refund tiers, and check-in
+        timelines.
       </p>
 
-      <h2>2. Guest-Initiated Cancellations</h2>
+      <h2>2. How Payments Work: Two Payment Options</h2>
       <p>
-        Guests may cancel a confirmed reservation either through the self-service
-        link provided in their digital booking voucher / email confirmation or by
-        contacting the hotel front desk directly.
+        Each property offers one of the following payment options. The option
+        applicable to your booking is shown before you pay and on your booking
+        confirmation.
       </p>
       <ul>
         <li>
-          <strong>Policy Visibility:</strong> The exact cancellation policy,
-          free cancellation cutoff deadlines, and tiered deduction schedules are
-          explicitly displayed on the room selection screen before payment and
-          reiterated on the booking confirmation voucher.
+          <strong>Option A: Pay Online (Hotel&apos;s Own Payment Gateway):</strong>{" "}
+          You pay the booking amount online, directly into the hotel&apos;s own
+          Razorpay account. Refunds, where applicable, are issued from the
+          hotel&apos;s account in line with the hotel&apos;s cancellation policy.
         </li>
         <li>
-          <strong>Calculation of Entitlement:</strong> Refund eligibility is
-          strictly evaluated against the cancellation rules in force at the
-          exact moment the reservation was confirmed.
+          <strong>Option B: Pay at Hotel:</strong> You pay a booking fee online
+          to secure the reservation, and pay the remaining amount directly at
+          the hotel. The booking fee is shown at checkout before you pay.
+        </li>
+      </ul>
+
+      <h2>3. Guest-Initiated Cancellations</h2>
+      <p>
+        Guests may cancel a confirmed reservation through the self-service link
+        in their booking voucher / confirmation email, or by contacting the hotel
+        directly. Online cancellation is available until the cutoff time set by
+        the hotel before check-in. After the cutoff, please contact the hotel.
+      </p>
+      <ul>
+        <li>
+          <strong>Policy Visibility:</strong> The hotel&apos;s cancellation policy,
+          cutoff time and any deduction schedule are displayed on the room
+          selection screen before payment and repeated on the booking
+          confirmation.
         </li>
         <li>
-          <strong>Standard Cancellation Tiers:</strong>
+          <strong>Applicable Rules:</strong> Your cancellation is assessed
+          against the policy that was displayed when your booking was confirmed.
+        </li>
+        <li>
+          <strong>Option A (Pay Online):</strong>
           <ul className="mt-2 list-circle pl-6">
             <li>
-              <strong>Free Cancellation Window:</strong> If cancelled prior to
-              the property&apos;s specified cutoff deadline (e.g., 24, 48, or 72 hours
-              prior to standard check-in time), the guest receives a full refund
-              of the advance deposit, minus any non-refundable platform or
-              statutory gateway handling charges if specified prior to booking.
+              <strong>Free Cancellation Window:</strong> If you cancel before
+              the hotel&apos;s cutoff, you receive a refund of the amount paid as
+              stated in the displayed policy.
             </li>
             <li>
-              <strong>Partial Refund Window:</strong> If cancelled within a
-              tiered window (e.g., between 24 and 48 hours prior to check-in),
-              the refund will reflect the percentage or fixed deduction defined
-              by the hotel (such as retention of the first night&apos;s tariff).
+              <strong>Partial Refund Window:</strong> If you cancel within a
+              tiered window defined by the hotel, the refund reflects the
+              percentage or fixed deduction stated in that policy (for example,
+              retention of the first night&apos;s tariff).
             </li>
             <li>
-              <strong>Late Cancellation / Non-Refundable Rates:</strong> Bookings
-              cancelled after the final deadline, or reservations explicitly
-              booked under promotional &quot;Non-Refundable&quot; rates, are not eligible
-              for a refund.
+              <strong>Late Cancellation / Non-Refundable Rates:</strong>{" "}
+              Cancellations after the final cutoff, and bookings made under a
+              &quot;Non-Refundable&quot; rate, are not eligible for a refund.
             </li>
           </ul>
         </li>
+        <li>
+          <strong>Option B (Pay at Hotel):</strong> Cancelling simply cancels
+          your reservation and releases the room, and nothing further is payable
+          at the hotel. The booking fee paid online is{" "}
+          <strong>non-refundable</strong> when the guest cancels, as it secures
+          the reservation and the room inventory.
+        </li>
       </ul>
 
-      <h2>3. No-Show &amp; Early Departure Policy</h2>
+      <h2>4. No-Show &amp; Early Departure</h2>
       <ul>
         <li>
-          <strong>No-Show:</strong> If a guest fails to check in on the scheduled
-          arrival date without prior written communication to the hotel, the
-          booking is classified as a &quot;No-Show&quot;. In such cases, the entire
-          advance payment or the total retention fee stipulated by the property
-          is forfeited, and the room inventory is released.
+          <strong>No-Show:</strong> If a guest does not check in on the scheduled
+          arrival date and has not informed the hotel, the booking is treated as
+          a &quot;No-Show&quot; and the room is released. Under Option A, any refund
+          follows the hotel&apos;s displayed policy for no-shows. Under Option B,
+          the online booking fee is not refunded.
         </li>
         <li>
-          <strong>Early Check-Out:</strong> If a guest chooses to shorten their
-          stay after check-in has taken place, refunds for unused room nights are
-          at the sole discretion of the Hotelier. PureBook cannot unilaterally
-          issue refunds for early check-outs without formal dashboard approval
-          from the property administration.
+          <strong>Early Check-Out:</strong> If a guest shortens the stay after
+          check-in, refunds for unused nights are at the sole discretion of the
+          Hotelier. PureBook cannot issue refunds for early check-outs.
         </li>
       </ul>
 
-      <h2>4. Hotel-Initiated Cancellations &amp; Operational Disruptions</h2>
+      <h2>5. Hotel-Initiated Cancellations &amp; Operational Disruptions</h2>
       <p>
-        In the rare circumstance that a Hotelier cancels a confirmed booking due
-        to unforeseen operational circumstances, natural events, overbooking, or
-        maintenance issues:
+        If a Hotelier cancels a confirmed booking because of unforeseen
+        operational circumstances, natural events, overbooking, or maintenance
+        issues:
       </p>
       <ul>
         <li>
           The Guest is entitled to a <strong>100% full refund</strong> of all
-          monies paid in advance, including any convenience or online booking
-          fees.
+          amounts paid online for the booking. Under Option A this is refunded
+          from the hotel&apos;s account; under Option B the online booking fee is
+          refunded in full.
         </li>
         <li>
-          Alternatively, the Hotelier may, with the express consent of the Guest,
-          arrange equivalent or upgraded alternative accommodation within
-          reasonable proximity at no additional cost to the Guest.
+          Alternatively, the Hotelier may, with the Guest&apos;s consent, arrange
+          equivalent or better accommodation nearby at no extra cost to the
+          Guest.
         </li>
         <li>
-          PureBook shall not be held liable for compensatory damages, travel
-          inconvenience, or ancillary costs incurred by the Guest arising from a
-          hotel-initiated cancellation.
-        </li>
-      </ul>
-
-      <h2>5. Pay-at-Hotel &amp; Partial Deposit Bookings</h2>
-      <ul>
-        <li>
-          <strong>Pay-at-Hotel:</strong> Where a booking is secured via a nominal
-          advance booking fee or token deposit, that token fee is
-          non-refundable in the event of a guest cancellation or no-show, as it
-          serves as an inventory reservation guarantee. If the hotel cancels the
-          booking, the token fee is refunded in full.
-        </li>
-        <li>
-          <strong>Partial Deposit Bookings:</strong> If an advance deposit (e.g.,
-          25% or 50%) was collected online, any refund calculation applies
-          proportionately to the advance amount collected, in accordance with the
-          hotel&apos;s cancellation tier.
+          PureBook is not liable for compensation, travel inconvenience, or
+          incidental costs arising from a hotel-initiated cancellation.
         </li>
       </ul>
 
       <h2>6. Refund Processing, Timelines &amp; Payment Modes</h2>
       <p>
-        All digital payment transactions and refunds on PureBook are processed
-        through Reserve Bank of India (RBI)-authorized payment aggregators
-        (primarily Razorpay).
+        Online payments and refunds are processed through RBI-authorised payment
+        aggregators (primarily Razorpay).
       </p>
       <ul>
         <li>
-          <strong>Source Account Reversal:</strong> Once a cancellation is
-          processed and confirmed, refunds are automatically credited back to
-          the original payment method used during checkout (UPI ID, credit/debit
-          card, or Net Banking account). PureBook does not issue cash refunds or
-          third-party transfers.
+          <strong>Source Account Reversal:</strong> Approved refunds are
+          credited back to the original payment method used at checkout (UPI,
+          credit/debit card, or net banking). Refunds are not issued in cash or
+          to third-party accounts.
+        </li>
+        <li>
+          <strong>Who Issues the Refund:</strong> Under Option A, the hotel
+          issues the refund from its own Razorpay account. Under Option B, the
+          refund of the booking fee (when due) is issued through PureBook&apos;s
+          payment account.
         </li>
         <li>
           <strong>Banking Turnaround Timelines:</strong>
           <ul className="mt-2 list-circle pl-6">
             <li>
-              <strong>UPI Transactions:</strong> Typically reflected within 24
-              to 48 banking hours.
+              <strong>UPI:</strong> Typically reflected within 24 to 48 banking
+              hours.
             </li>
             <li>
-              <strong>Net Banking &amp; RuPay / Visa / Mastercard Debit &amp; Credit Cards:</strong>{" "}
-              Typically processed within 5 to 7 business days, depending on the
-              guest&apos;s issuing bank settlement cycles.
+              <strong>Net Banking, RuPay / Visa / Mastercard Debit &amp; Credit
+              Cards:</strong> Typically 5 to 7 business days, depending on your
+              bank&apos;s settlement cycle.
             </li>
           </ul>
         </li>
         <li>
-          <strong>Payment Gateway Failures / Double Debits:</strong> If a guest&apos;s
-          account is debited but the booking was not confirmed due to network or
-          server timeout, the automated reconciliation engine initiates a full
-          reversal within 24 hours.
+          <strong>Payment Failures / Double Debits:</strong> If your account is
+          debited but the booking was not confirmed because of a network or
+          server timeout, our reconciliation process initiates an automatic
+          reversal once the payment is verified. The credit then follows the
+          banking timelines above.
         </li>
       </ul>
 
-      <h2>7. Goods and Services Tax (GST) Treatment on Cancellations</h2>
-      <p>
-        In compliance with the Central Goods and Services Tax (CGST) and State
-        Goods and Services Tax (SGST) regulations in India:
-      </p>
+      <h2>7. Taxes on Cancellations</h2>
       <ul>
         <li>
-          Where a full refund is issued prior to check-in, the associated GST
-          component collected on the advance is credited back in full.
+          Where a full refund is issued before check-in, any GST collected by
+          the Hotelier on the amount paid is refunded along with it.
         </li>
         <li>
-          Where retention fees or cancellation penalties are retained by the
-          Hotelier, such fees may be treated as charges for cancellation services
-          and subject to statutory GST deductions in accordance with applicable
-          Indian tax rules.
+          Where retention fees or cancellation charges are kept by the Hotelier,
+          they may attract GST as per applicable Indian tax rules.
         </li>
         <li>
-          GST credit notes or amended invoices will be generated and issued by
-          the Hotelier to the Guest where statutory invoicing has already occurred.
+          Credit notes or amended invoices, where required, are issued by the
+          Hotelier to the Guest.
         </li>
       </ul>
 
       <h2>8. Force Majeure &amp; Extraordinary Circumstances</h2>
       <p>
-        Neither PureBook nor the Hotelier shall be deemed in breach of their
-        obligations for failure to host or execute reservations resulting from
-        Acts of God, extreme natural disasters, pandemic lockdowns, curfew
-        orders, state-level travel bans, or civil unrest making the accommodation
-        physically or legally inaccessible.
+        Neither PureBook nor the Hotelier is in breach of obligations where a
+        stay cannot be hosted because of Acts of God, extreme natural disasters,
+        pandemic lockdowns, curfew orders, state-level travel bans, or civil
+        unrest that makes the accommodation physically or legally inaccessible.
       </p>
       <p>
-        In such circumstances, Hoteliers are encouraged to provide date change
-        credits or full refunds subject to state governmental directives issued
-        at the time.
+        In such cases, Hoteliers are encouraged to offer date-change credits or
+        full refunds, subject to government directions in force at the time.
       </p>
 
       <h2>9. Contact &amp; Dispute Escalation</h2>
       <p>
-        For questions or status updates regarding an existing cancellation or
-        refund:
+        For questions or status updates on an existing cancellation or refund:
       </p>
       <ol>
         <li>
           <strong>First Point of Contact:</strong> Contact the hotel directly
-          using the phone number or email address listed on your booking voucher,
-          as the hotel administers inventory approvals and policy waivers.
+          using the phone number or email on your booking voucher, as the hotel
+          manages room availability and policy exceptions.
         </li>
         <li>
-          <strong>PureBook Support Desk:</strong> If you are unable to resolve
-          the matter with the hotel or require technical verification of a
-          payment refund reference number (RRN), write to our support team:
+          <strong>PureBook Support Desk:</strong> If you cannot resolve the
+          matter with the hotel, or need technical verification of a payment
+          refund reference number (RRN), write to our support team:
         </li>
       </ol>
 

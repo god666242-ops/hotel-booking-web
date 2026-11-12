@@ -4,14 +4,7 @@ export default function Page() {
   return (
     <article className="mx-auto max-w-3xl space-y-4 px-5 py-16 text-slate-700 [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:text-slate-900 [&_h2]:mt-8 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-slate-900 [&_h3]:mt-4 [&_h3]:text-base [&_h3]:font-medium [&_h3]:text-slate-800 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
       <h1>Terms &amp; Conditions</h1>
-      <p className="text-sm text-slate-500">
-        Last updated:{" "}
-        {new Date().toLocaleDateString("en-IN", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
-      </p>
+      <p className="text-sm text-slate-500">Last updated: 12 November 2026</p>
 
       <p className="rounded-lg bg-amber-50 p-3 text-sm text-amber-800">
         Please read these Terms and Conditions carefully before accessing or
@@ -92,17 +85,20 @@ export default function Page() {
         <li>
           <strong>Invoices:</strong> The primary tax invoice for lodging and stay
           services is issued directly by the Hotelier to the Guest upon
-          check-in or check-out. PureBook issues tax invoices solely to the
-          Hotelier for platform subscription fees or commission services rendered.
+          check-in or check-out. PureBook issues invoices only to the Hotelier,
+          for the platform commission payable under these Terms.
         </li>
         <li>
-          <strong>Payment Modes:</strong> Bookings may be facilitated through full
-          advance payment, partial advance deposit, or &quot;Pay-at-Hotel&quot; as
-          determined by the Hotelier’s configured payment modes.
+          <strong>Payment Options:</strong> Each Hotelier offers one of two
+          payment options: (a) <strong>Pay Online</strong> through the
+          Hotelier&apos;s own Razorpay payment gateway, or (b){" "}
+          <strong>Pay at Hotel</strong>, where the Guest pays a booking fee
+          online and the balance at the property. The option that applies is
+          shown to the Guest before payment.
         </li>
       </ul>
 
-      <h2>5. Payments &amp; Financial Settlement</h2>
+      <h2>5. Payments, Platform Commission &amp; Settlement</h2>
       <p>
         Payment processing on the PureBook platform is facilitated through
         Reserve Bank of India (RBI)-authorized payment aggregators, primarily
@@ -110,16 +106,38 @@ export default function Page() {
       </p>
       <ul>
         <li>
-          <strong>Direct Settlement:</strong> Where Hoteliers connect their own
-          payment gateway accounts, transaction settlements, UPI transfers, credit/debit
-          card clearances, and chargeback disputes flow directly between the
-          gateway and the Hotelier’s registered bank account.
+          <strong>Pay Online (Hotelier&apos;s Own Gateway):</strong> The Hotelier
+          connects their own Razorpay account. Guest payments, UPI transfers,
+          card clearances, refunds, and chargeback disputes flow directly between
+          the gateway and the Hotelier&apos;s own account and bank account.
+          PureBook does not hold or settle these funds. PureBook charges a
+          platform commission of <strong>5%</strong> of the booking value,
+          invoiced to the Hotelier weekly.
         </li>
         <li>
-          <strong>Platform Commission &amp; Invoicing:</strong> Where pure SaaS
-          commissions or fee deductions apply, PureBook reserves the right to
-          invoice or collect software platform fees in accordance with the
-          selected commercial plan.
+          <strong>Pay at Hotel:</strong> The Guest pays a booking fee of{" "}
+          <strong>8%</strong> of the booking value online at checkout, which is
+          retained by PureBook as its commission. The balance is paid by the
+          Guest directly to the Hotelier at the property. This fee is
+          non-refundable on Guest cancellation, and refunded in full if the
+          Hotelier cancels, as set out in the Refund &amp; Cancellation Policy.
+        </li>
+        <li>
+          <strong>Commission Base:</strong> Commission is calculated on the room
+          tariff and add-ons, excluding the Hotelier&apos;s GST. Different rates
+          apply only where agreed in writing with the Hotelier.
+        </li>
+        <li>
+          <strong>Invoicing &amp; Non-Payment:</strong> Weekly commission
+          invoices are payable within the period stated on the invoice, through
+          the payment link provided. PureBook may suspend access to the booking
+          engine for invoices that remain unpaid after the stated period.
+        </li>
+        <li>
+          <strong>Taxes on Platform Fees:</strong> PureBook is currently not
+          registered under GST and does not charge GST on its commission or
+          booking fees. If registration becomes applicable, GST will be added
+          as required by law, with notice to Hoteliers.
         </li>
         <li>
           <strong>Payment Gateway Security:</strong> PureBook does not store raw
@@ -132,13 +150,19 @@ export default function Page() {
       <h2>6. Cancellations &amp; Refunds</h2>
       <p>
         All cancellation requests and refund entitlements are governed by the
-        Hotelier&apos;s cancellation policy selected at the time of booking:
+        Hotelier&apos;s cancellation policy displayed at the time of booking, and
+        by the payment option that applies to the booking:
       </p>
       <ul>
         <li>
           Refund calculations (including free cancellation windows, deduction
-          tiers, and non-refundable rates) are processed automatically based on
-          the property&apos;s explicit rules.
+          tiers, and non-refundable rates) follow the property&apos;s displayed
+          rules. Under Pay Online, refunds are issued from the Hotelier&apos;s own
+          gateway account.
+        </li>
+        <li>
+          Under Pay at Hotel, a Guest cancellation simply cancels the booking,
+          and the online booking fee is non-refundable.
         </li>
         <li>
           Approved refunds are credited back to the original source payment
@@ -224,9 +248,8 @@ export default function Page() {
       </p>
       <p>
         Any disputes, controversies, or claims arising out of or relating to
-        the platform, services, or these terms shall be subject to the exclusive
-        jurisdiction of the competent courts having jurisdiction over the registered
-        place of business of PureBook.
+        the platform, services, or these terms shall be subject to the
+        jurisdiction of the competent courts in India.
       </p>
 
       <h2>11. Contact &amp; Grievance Redressal</h2>

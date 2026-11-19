@@ -1,6 +1,8 @@
 import ContactSection from '@/components/ContactSection';
 
-export const metadata = { title: 'Book a Demo – PureBook' };
+import { pageMetadata, PAGES } from '@/lib/seo';
+
+export const metadata = pageMetadata(PAGES.contact);
 
 export default function ContactPage() {
   return <ContactSection id="book-demo" />;

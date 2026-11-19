@@ -1,4 +1,6 @@
-export const metadata = { title: "Privacy Policy – PureBook" };
+import { pageMetadata, PAGES } from '@/lib/seo';
+
+export const metadata = pageMetadata(PAGES.privacy);
 
 export default function Page() {
   return (

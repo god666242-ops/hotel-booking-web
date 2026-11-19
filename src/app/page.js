@@ -5,6 +5,8 @@ import Features from '@/components/Features';
 import Pricing from '@/components/Pricing';
 // import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
+import JsonLd from '@/components/JsonLd';
+import { homeSchema } from '@/lib/seo';
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
       <Pricing />
       {/* <Testimonials /> */}
       <Faq />
+      <JsonLd data={homeSchema()} />
     </>
   );
 }

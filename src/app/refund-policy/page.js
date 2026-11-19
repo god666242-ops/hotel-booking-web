@@ -1,4 +1,6 @@
-export const metadata = { title: "Refund & Cancellation Policy – PureBook" };
+import { pageMetadata, PAGES } from '@/lib/seo';
+
+export const metadata = pageMetadata(PAGES.refund);
 
 export default function Page() {
   return (

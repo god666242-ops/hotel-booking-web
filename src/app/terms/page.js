@@ -1,4 +1,6 @@
-export const metadata = { title: "Terms & Conditions – PureBook" };
+import { pageMetadata, PAGES } from '@/lib/seo';
+
+export const metadata = pageMetadata(PAGES.terms);
 
 export default function Page() {
   return (

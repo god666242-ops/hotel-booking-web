@@ -1,6 +1,8 @@
 import { WIDGET_DEMO_URL } from '@/lib/config';
 
-export const metadata = { title: 'Live Demo – PureBook' };
+import { pageMetadata, PAGES } from '@/lib/seo';
+
+export const metadata = pageMetadata(PAGES.demo);
 
 export default function DemoPage() {
   return (
